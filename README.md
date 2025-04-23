@@ -4,17 +4,13 @@
 To read the given data and perform data analysis using Numpy and Pandas.
 
 # Algorithm
-STEP 1: Read the given Data
+STEP 1: Read the given Data.
 
-STEP 2: Get the information about the data
+STEP 2: Get the information about the data.
 
-STEP 3: Remove the null values from the data
+STEP 3: Remove and Fill the null values from the data.
 
-STEP 4: Save the Clean data to the file
-
-STEP 5: Remove outliers using IQR
-
-STEP 6: Use zscore of to remove outliers
+STEP 4: Save the Clean data to the respective files.
 
 # Coding and Output
 ```
@@ -28,7 +24,7 @@ data = {
 df = pd.DataFrame(data)
 print(df.head(3))
 ```
-![alt text](<Output Screenshots/Screenshot 2025-04-23 144633.png>)
+![alt text](<Output Screenshots/Screenshot 2025-04-23 144629.png>)
 
 ```
 import pandas as pd
@@ -41,7 +37,7 @@ data = {
 df = pd.DataFrame(data)
 print(df.tail(3))
 ```
-![alt text](<Output Screenshots/Screenshot 2025-04-23 144638.png>)
+![alt text](<Output Screenshots/Screenshot 2025-04-23 144633.png>)
 ```
 import pandas as pd
 data = {
@@ -53,7 +49,7 @@ data = {
 df = pd.DataFrame(data)
 df.info()
 ```
-![alt text](<Output Screenshots/Screenshot 2025-04-23 144646.png>)
+![alt text](<Output Screenshots/Screenshot 2025-04-23 144638.png>)
 ```
 import pandas as pd
 data = {
@@ -65,7 +61,7 @@ data = {
 df = pd.DataFrame(data)
 print(df.describe())
 ```
-![alt text](<Output Screenshots/Screenshot 2025-04-23 144650.png>)
+![alt text](<Output Screenshots/Screenshot 2025-04-23 144646.png>)
 ```
 import pandas as pd
 data = {
@@ -76,7 +72,7 @@ data = {
 df = pd.DataFrame(data)
 print(df.sort_values(by='age', ascending = False))
 ```
-![alt text](<Output Screenshots/Screenshot 2025-04-23 144654.png>)
+![alt text](<Output Screenshots/Screenshot 2025-04-23 144650.png>)
 ```
 import pandas as pd
 data = {
@@ -88,7 +84,7 @@ data = {
 df = pd.DataFrame(data)
 print(df.groupby('gender')['salary'].mean())
 ```
-![alt text](<Output Screenshots/Screenshot 2025-04-23 144708.png>)
+![alt text](<Output Screenshots/Screenshot 2025-04-23 144654.png>)
 ```
 import pandas as pd
 data = {
@@ -100,7 +96,7 @@ data = {
 df = pd.DataFrame(data)
 print(df.groupby('gender').count())
 ```
-![alt text](<Output Screenshots/Screenshot 2025-04-23 144714.png>)
+![alt text](<Output Screenshots/Screenshot 2025-04-23 144708.png>)
 ```
 import pandas as pd
 data = {
@@ -110,22 +106,22 @@ data = {
 df = pd.DataFrame(data)
 df
 ```
-![alt text](<Output Screenshots/Screenshot 2025-04-23 144720.png>)
+![alt text](<Output Screenshots/Screenshot 2025-04-23 144714.png>)
 ```
 df_cleaned = df.dropna(subset=['Salary'])
 print(df_cleaned)
 ```
-![alt text](<Output Screenshots/Screenshot 2025-04-23 144723.png>)
+![alt text](<Output Screenshots/Screenshot 2025-04-23 144720.png>)
 ```
 df_cleaned_all = df.dropna(how='all')
 print(df_cleaned_all)
 ```
-![alt text](<Output Screenshots/Screenshot 2025-04-23 144728.png>)
+![alt text](<Output Screenshots/Screenshot 2025-04-23 144723.png>)
 ```
 df_cleaned_any = df.dropna(how='any')
 print(df_cleaned_any)
 ```
-![alt text](<Output Screenshots/Screenshot 2025-04-23 144732.png>)
+![alt text](<Output Screenshots/Screenshot 2025-04-23 144728.png>)
 ```
 import pandas as pd
 import numpy as np
@@ -138,7 +134,7 @@ data = {
 df = pd.DataFrame(data)
 ~df.duplicated()
 ```
-![alt text](<Output Screenshots/Screenshot 2025-04-23 144737.png>)
+![alt text](<Output Screenshots/Screenshot 2025-04-23 144732.png>)
 ```
 import pandas as pd
 import numpy as np
